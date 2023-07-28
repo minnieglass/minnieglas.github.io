@@ -1,7 +1,92 @@
+```html
 <!DOCTYPE html>
 <html>
+<head>
+    <title>电影平台</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>电影平台</h1>
+    </header>
+
+    <div id="movies-list">
+        <div class="movie">
+            < img src="movie1.jpg" alt="Movie 1">
+            <h2>电影1</h2>
+            <p>电影1的简介。</p >
+            <button onclick="watchMovie('movie1.mp4')">播放</button>
+        </div>
+        <div class="movie">
+            < img src="movie2.jpg" alt="Movie 2">
+            <h2>电影2</h2>
+            <p>电影2的简介。</p >
+            <button onclick="watchMovie('movie2.mp4')">播放</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html>1
+</html>
+```
+
+CSS部分（style.css）：
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+#movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.movie {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+```
+
+JavaScript部分（script.js）：
+```javascript
+function watchMovie(movieUrl) {
+    // 在这里实现播放电影的逻辑，例如使用 video 标签播放传入的 movieUrl
+    console.log("正在播放：" + movieUrl);
+}
+```
